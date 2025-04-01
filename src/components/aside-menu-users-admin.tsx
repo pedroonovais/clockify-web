@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 interface AsideMenuUsersAdminProps {
-    active: "Gerenciar Usuários" | "Gerenciar Companhia" | "Gerenciar Projetos" | "Configurações";
+    active: "Gerenciar Usuários" | "Gerenciar Companhia" | "Gerenciar Perfis" | "Gerenciar Atividades" | "Configurações";
 }
 
 export default function AsideMenuUsersAdmin(props: AsideMenuUsersAdminProps) {
@@ -9,9 +9,10 @@ export default function AsideMenuUsersAdmin(props: AsideMenuUsersAdminProps) {
     const activeClass = "font-semibold"
 
     const links = [
-        { label: "Gerenciar Usuários", href: "/users-admin" },
         { label: "Gerenciar Companhia", href: "/users-admin/companies" },
-        { label: "Gerenciar Projetos", href: "/users-admin/projects" },
+        { label: "Gerenciar Usuários", href: "/users-admin" },
+        { label: "Gerenciar Perfis", href: "/users-admin/profiles" },
+        { label: "Gerenciar Atividades", href: "/users-admin/activities" },
         { label: "Configurações", href: "/users-admin/settings" },
     ];
     
