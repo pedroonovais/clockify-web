@@ -11,23 +11,12 @@ import {
 import { Button } from "./ui/button"
 import { Edit, Trash } from "lucide-react"
   
-  const invoices = [
-    {
-      invoice: "INV-0001",
-      paymentStatus: "Pago",
-      paymentMethod: "Cartão de Crédito",
-      totalAmount: "R$ 1.500,00",
-    },
-    {
-      invoice: "INV-0002",
-      paymentStatus: "Pendente",
-      paymentMethod: "Boleto Bancário", 
-      totalAmount: "R$ 2.000,00",
-    },
-  ]
-  
-  export function TableUsersAdmin() {
-    const isEmpty = invoices.length === 0
+  interface TableUsersAdminProps {
+    data: UserAdmin[]
+  }  
+
+  export function TableUsersAdmin({data}: TableUsersAdminProps) {
+    const isEmpty = data.length === 0
 
     return (
       <Table>
@@ -49,12 +38,12 @@ import { Edit, Trash } from "lucide-react"
               </TableRow>
             </TableHeader>
             <TableBody>
-              {invoices.map((invoice) => (
-                <TableRow key={invoice.invoice}>
-                  <TableCell className="font-medium">{invoice.invoice}</TableCell>
-                  <TableCell>{invoice.paymentStatus}</TableCell>
-                  <TableCell>{invoice.paymentMethod}</TableCell>
-                  <TableCell className="text-right">{invoice.totalAmount}</TableCell>
+              {data.map((user) => (
+                <TableRow key={user.id}>
+                  <TableCell className="font-medium">{user.name}</TableCell>
+                  <TableCell>{user.name}</TableCell>
+                  <TableCell>{user.idCompany}</TableCell>
+                  <TableCell className="text-right">{user.hoursLogged}</TableCell>
                   <TableCell className="text-right flex gap-2 justify-end">
                     <Button className="bg-orange-peel text-white" size="sm">
                       <Edit />
@@ -70,7 +59,7 @@ import { Edit, Trash } from "lucide-react"
             </TableBody>
             <TableFooter>
               <TableRow>
-                <TableCell>Total de registros: {invoices.length}</TableCell>
+                <TableCell>Total de registros: {data.length}</TableCell>
               </TableRow>
             </TableFooter>
           </>

@@ -1,3 +1,4 @@
+import { getUsersAdmin } from "@/actions/users-admin-actions";
 import AsideMenuUsersAdmin from "@/components/aside-menu-users-admin"
 import HeaderUsersAdmin from "@/components/header-users-admin";
 import { TableUsersAdmin } from "@/components/table-users-admin";
@@ -5,7 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import Link from "next/link";
 
-export default function UsersAdminPage() {
+export default async function UsersAdminPage() {
+    const data: UserAdmin[] = await getUsersAdmin();
+
     return (
         <div className="h-screen flex">
             <AsideMenuUsersAdmin active="Gerenciar Usuários"/>
@@ -22,7 +25,7 @@ export default function UsersAdminPage() {
                         </Button>
                     </Link>
 
-                    <TableUsersAdmin />
+                    <TableUsersAdmin data={data} />
 
                 </main>
             </div>
