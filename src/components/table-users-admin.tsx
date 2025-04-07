@@ -40,10 +40,10 @@ import { Edit, Trash } from "lucide-react"
             <TableBody>
               {data.map((user) => (
                 <TableRow key={user.id}>
-                  <TableCell className="font-medium">{user.name}</TableCell>
+                  <TableCell className="font-medium">{user.id}</TableCell>
                   <TableCell>{user.name}</TableCell>
                   <TableCell>{user.idCompany}</TableCell>
-                  <TableCell className="text-right">{user.hoursLogged}</TableCell>
+                  <TableCell className="text-right">{!user.hoursLogged ? 0 : user.hoursLogged > 0 ? user.hoursLogged : 0}</TableCell>
                   <TableCell className="text-right flex gap-2 justify-end">
                     <Button className="bg-orange-peel text-white" size="sm">
                       <Edit />
