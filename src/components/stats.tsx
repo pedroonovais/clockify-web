@@ -21,7 +21,7 @@ export function Stats() {
   return <section className="py-12 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
-          {stats.map((stat, index) => <div key={index} className="bg-gray-900/50 border border-gray-700 rounded-lg p-6 text-center hover:border-blue-500/50 transition-colors" data-aos="fade-up">
+          {stats.map((stat, index) => <div key={index} className="bg-gray-900/50 border border-gray-700 rounded-lg p-6 text-center hover:border-blue-500/50 transition-colors" data-aos="fade-left">
               <div className="flex justify-center mb-4">{stat.icon}</div>
               <div className="text-3xl font-bold text-white mb-2">
                 {stat.value}

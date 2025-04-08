@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button } from './button';
 import { MailIcon } from 'lucide-react';
+
 export function Newsletter() {
   return <section className="py-20 bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-left">
         <div className="relative">
           <div className="absolute inset-0 bg-blue-500 rounded-3xl opacity-10 blur-2xl"></div>
           <div className="relative bg-gray-800 border border-gray-700 rounded-2xl p-8 md:p-12 overflow-hidden">

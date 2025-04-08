@@ -27,7 +27,7 @@ export function FAQ() {
   };
   return <section id="faq" className="py-20 bg-gray-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Perguntas Frequentes
           </h2>
@@ -36,7 +36,7 @@ export function FAQ() {
           </p>
         </div>
         <div className="space-y-4">
-          {faqs.map((faq, index) => <div key={index} className="border border-gray-700 rounded-lg overflow-hidden">
+          {faqs.map((faq, index) => <div key={index} className="border border-gray-700 rounded-lg overflow-hidden" data-aos="fade-left">
               <button className="w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none" onClick={() => toggleFAQ(index)}>
                 <h3 className="text-lg font-medium text-white">
                   {faq.question}

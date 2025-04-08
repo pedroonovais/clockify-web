@@ -19,7 +19,7 @@ export function HowItWorks() {
   }];
   return <section id="how-it-works" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Como Funciona
           </h2>
@@ -31,14 +31,14 @@ export function HowItWorks() {
         <div className="space-y-24">
           {steps.map((step, index) => <div key={index} className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12`}>
               <div className="lg:w-1/2">
-                <div className="relative">
+                <div className="relative" data-aos="fade-right">
                   <div className="absolute -inset-1 bg-blue-500 rounded-lg blur opacity-20"></div>
                   <div className="relative aspect-video overflow-hidden rounded-lg border border-gray-700">
                     <img src={step.image} alt={step.title} className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
-              <div className="lg:w-1/2">
+              <div className="lg:w-1/2" data-aos="fade-left">
                 <span className="inline-block text-4xl font-bold text-blue-500 mb-4">
                   {step.number}
                 </span>

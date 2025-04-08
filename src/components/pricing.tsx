@@ -30,7 +30,7 @@ export function Pricing() {
   }];
   return <section id="pricing" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12" data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Planos Simples e Transparentes
           </h2>
@@ -51,7 +51,7 @@ export function Pricing() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {plans.map((plan, index) => <div key={index} className={`rounded-xl overflow-hidden ${plan.highlighted ? 'border-2 border-blue-500 bg-gray-900 transform scale-105 shadow-xl shadow-blue-500/20' : 'border border-gray-700 bg-gray-900'}`}>
+          {plans.map((plan, index) => <div key={index} className={`rounded-xl overflow-hidden ${plan.highlighted ? 'border-2 border-blue-500 bg-gray-900 transform scale-105 shadow-xl shadow-blue-500/20' : 'border border-gray-700 bg-gray-900'}`} data-aos="fade-left">
               {plan.highlighted && <div className="bg-blue-500 text-center py-2 text-sm font-semibold text-white">
                   MAIS POPULAR
                 </div>}
