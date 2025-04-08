@@ -7,41 +7,6 @@ export async function getUsersAdmin() {
     return response.json()
 }
 
-export async function createCategory(initialValue: any, formData: FormData) {
-    
-    const data = {
-        name: formData.get("name"),
-        icon: formData.get("icon"),
-    }
-
-    const options = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-    }
-
-    const response = await fetch(API_URL, options)
-
-    if(!response.ok) {
-        const json = await response.json()
-        const errors = json.errors
-        
-        return { 
-            valuees: {
-                name: formData.get("name"),
-                icon: formData.get("icon"),
-            },
-            errors: { 
-                name: errors.find(e => e.field === "name")?.defaultMessage, 
-                icon: errors.find(e => e.field === "icon")?.defaultMessage,
-            } 
-        }
-    }
-
-    redirect("/categories")
-}
 
 export async function createUserAdmin(initialValue: any, formData: FormData) {
 
@@ -70,17 +35,10 @@ export async function createUserAdmin(initialValue: any, formData: FormData) {
         const json = await response.json()
         const errors = json.errors
         
+        console.log(errors)
+
         return { 
-            valuees: {
-                idCompany: formData.get("idCompany"),
-                name: formData.get("name"),
-                email: formData.get("email"),
-                hoursLogged: 0,
-                cpf: formData.get("cpf"),
-                phone: formData.get("phone"),
-                password: formData.get("password"),
-                active: formData.get("active"),
-            },
+            values: data,
             errors: { 
                 idCompany: errors.find(e => e.field === "idCompany")?.defaultMessage, 
                 name: errors.find(e => e.field === "name")?.defaultMessage,

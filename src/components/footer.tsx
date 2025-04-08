@@ -57,7 +57,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           <div className="col-span-2">
             <div className="text-2xl font-bold text-blue-400 mb-4">
-              TimeTrack
+              Clockify
             </div>
             <p className="text-gray-400 mb-4 max-w-xs">
               Solução completa para gestão de tempo e produtividade para equipes
@@ -123,7 +123,7 @@ export function Footer() {
         </div>
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            &copy; {currentYear} TimeTrack. Todos os direitos reservados.
+            &copy; {currentYear} Clockify. Todos os direitos reservados.
           </p>
           <div className="mt-4 md:mt-0">
             <ul className="flex space-x-6">

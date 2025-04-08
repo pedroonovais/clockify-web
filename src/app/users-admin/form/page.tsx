@@ -32,7 +32,7 @@ export default function UsersAdminFormPage() {
             phone: "",
             password: "",
             active: ""
-        }
+        },
     }
 
     const[state, formAction, pending] = useActionState(createUserAdmin, initialState)
@@ -97,8 +97,4 @@ export default function UsersAdminFormPage() {
             </div>
         </div>
     );
-}
-
-function createCategory(state: { values: { id: null; idCompany: null; name: string; email: string; hoursLogged: null; cpf: string; phone: string; password: string; active: boolean; }; errors: { id: string; idCompany: string; name: string; email: string; hoursLogged: string; cpf: string; phone: string; password: string; active: string; }; }): { values: { id: null; idCompany: null; name: string; email: string; hoursLogged: null; cpf: string; phone: string; password: string; active: boolean; }; errors: { id: string; idCompany: string; name: string; email: string; hoursLogged: string; cpf: string; phone: string; password: string; active: string; }; } | Promise<{ values: { id: null; idCompany: null; name: string; email: string; hoursLogged: null; cpf: string; phone: string; password: string; active: boolean; }; errors: { id: string; idCompany: string; name: string; email: string; hoursLogged: string; cpf: string; phone: string; password: string; active: string; }; }> {
-    throw new Error("Function not implemented.");
 }

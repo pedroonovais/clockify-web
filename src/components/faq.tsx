@@ -3,17 +3,17 @@ import { useState } from 'react';
 
 export function FAQ() {
   const faqs = [{
-    question: 'Como o TimeTrack pode ajudar minha empresa?',
-    answer: 'O TimeTrack ajuda sua empresa a monitorar com precisão o tempo gasto em projetos, otimizar a alocação de recursos, melhorar a produtividade e garantir um faturamento preciso baseado nas horas trabalhadas.'
+    question: 'Como o Clockify pode ajudar minha empresa?',
+    answer: 'O Clockify ajuda sua empresa a monitorar com precisão o tempo gasto em projetos, otimizar a alocação de recursos, melhorar a produtividade e garantir um faturamento preciso baseado nas horas trabalhadas.'
   }, {
-    question: 'Posso experimentar o TimeTrack antes de assinar?',
+    question: 'Posso experimentar o Clockify antes de assinar?',
     answer: 'Sim! Oferecemos um período de teste gratuito de 14 dias para todos os planos, sem necessidade de cartão de crédito. Você pode experimentar todas as funcionalidades antes de decidir qual plano é melhor para sua empresa.'
   }, {
-    question: 'O TimeTrack funciona em dispositivos móveis?',
-    answer: 'Sim, o TimeTrack possui aplicativos nativos para iOS e Android, permitindo que você e sua equipe registrem horas em qualquer lugar, mesmo offline. Os dados serão sincronizados automaticamente quando a conexão for restabelecida.'
+    question: 'O Clockify funciona em dispositivos móveis?',
+    answer: 'Sim, o Clockify possui aplicativos nativos para iOS e Android, permitindo que você e sua equipe registrem horas em qualquer lugar, mesmo offline. Os dados serão sincronizados automaticamente quando a conexão for restabelecida.'
   }, {
-    question: 'Quais integrações o TimeTrack oferece?',
-    answer: 'O TimeTrack se integra com diversas ferramentas populares como Jira, Asana, Trello, Slack, QuickBooks, Xero e muitas outras. Também oferecemos uma API robusta para integrações personalizadas.'
+    question: 'Quais integrações o Clockify oferece?',
+    answer: 'O Clockify se integra com diversas ferramentas populares como Jira, Asana, Trello, Slack, QuickBooks, Xero e muitas outras. Também oferecemos uma API robusta para integrações personalizadas.'
   }, {
     question: 'Posso mudar de plano depois?',
     answer: 'Absolutamente! Você pode atualizar ou fazer downgrade do seu plano a qualquer momento. Se você atualizar, o valor será ajustado proporcionalmente ao tempo restante do seu período de cobrança atual.'
@@ -32,7 +32,7 @@ export function FAQ() {
             Perguntas Frequentes
           </h2>
           <p className="text-xl text-gray-300">
-            Tudo o que você precisa saber sobre o TimeTrack
+            Tudo o que você precisa saber sobre o Clockify
           </p>
         </div>
         <div className="space-y-4">

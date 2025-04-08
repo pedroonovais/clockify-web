@@ -32,7 +32,7 @@ export function Integrations() {
             Integre com suas ferramentas favoritas
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            O TimeTrack se conecta com as principais ferramentas do mercado para
+            O Clockify se conecta com as principais ferramentas do mercado para
             tornar seu trabalho ainda mais eficiente
           </p>
         </div>
