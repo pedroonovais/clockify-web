@@ -12,9 +12,10 @@ interface HeaderUsersAdminProps {
 
 export default function HeaderUsersAdmin({ userName }: HeaderUsersAdminProps) {
   return (
-    <header className="relative bg-gray-900 text-white p-4 w-full flex justify-end items-center z-10">
-      {/* Gradiente igual ao Hero */}
+    <header className="relative bg-gray-900 text-white p-4 w-full flex justify-between items-center z-10">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-transparent to-transparent pointer-events-none" />
+
+      <p className="text-xl">Área Administrativa</p>
 
       <DropdownMenu>
         <DropdownMenuTrigger className="flex flex-row items-center gap-3 hover:opacity-90 transition-opacity relative z-10">
