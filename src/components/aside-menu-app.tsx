@@ -34,7 +34,6 @@ export default function AsideMenuUsersAdmin({ active }: AsideMenuUsersAdminProps
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Fundo com gradiente igual ao Hero */}
       <div className="absolute inset-0 bg-gray-800" />
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-transparent to-transparent" />
       <div className="relative z-10 p-4 flex flex-col gap-6">
