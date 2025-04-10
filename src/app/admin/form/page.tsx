@@ -1,6 +1,6 @@
 "use client"
-import { createUserAdmin } from "@/actions/users-admin-actions";
-import AsideMenuUsersAdmin from "@/components/aside-menu-users-admin";
+import { createUserAdmin } from "@/actions/admin-actions";
+import AsideMenuUsersAdmin from "@/components/aside-menu-app";
 import HeaderUsersAdmin from "@/components/header-users-admin";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

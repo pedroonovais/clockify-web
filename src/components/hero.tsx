@@ -49,7 +49,7 @@ export function Hero() {
                       <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                     </div>
                     <div className="mx-auto text-gray-400 text-sm">
-                      TimeTrack Dashboard
+                      Clockify Dashboard
                     </div>
                   </div>
                   <div className="p-6">

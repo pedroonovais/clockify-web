@@ -1,17 +1,42 @@
-import { LogOut } from "lucide-react";
+import { LogOutIcon, User } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 interface HeaderUsersAdminProps {
-    userName: string
+  userName: string;
 }
 
-export default function HeaderUsersAdmin(props: HeaderUsersAdminProps) {
-    const { userName } = props
+export default function HeaderUsersAdmin({ userName }: HeaderUsersAdminProps) {
+  return (
+    <header className="relative bg-gray-900 text-white p-4 w-full flex justify-end items-center z-10">
+      {/* Gradiente igual ao Hero */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-transparent to-transparent pointer-events-none" />
 
-    return <header className="flex justify-between items-center bg-lapis-lazuli text-white p-4 w-full">
-        <p className="text-lg">Olá, {userName}!</p>
-        <button className="bg-danger text-white px-4 py-2 rounded flex gap-2">
-            <LogOut />
-            Logout
-        </button>
+      <DropdownMenu>
+        <DropdownMenuTrigger className="flex flex-row items-center gap-3 hover:opacity-90 transition-opacity relative z-10">
+          <span className="font-medium text-white">{userName}</span>
+          <img
+            className="size-10 rounded-full border border-gray-700 hover:scale-105 transition-transform"
+            src="http://github.com/pedroonovais.png"
+            alt="Foto de perfil"
+          />
+        </DropdownMenuTrigger>
+
+        <DropdownMenuContent className="bg-gray-800 border border-gray-700 text-white shadow-lg mt-2">
+          <DropdownMenuItem className="flex items-center gap-2 hover:bg-gray-700 cursor-pointer transition-colors">
+            <User size={16} />
+            <span>Perfil</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem className="flex items-center gap-2 hover:bg-gray-700 cursor-pointer transition-colors">
+            <LogOutIcon size={16} />
+            <span>Sair</span>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </header>
+  );
 }

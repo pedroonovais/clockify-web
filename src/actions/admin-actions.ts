@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation"
 
-const API_URL = "http://localhost:8080/users-admin"
+const API_URL = "http://localhost:8080/admin"
 
 export async function getUsersAdmin() {
     const response = await fetch(API_URL)
@@ -52,5 +52,5 @@ export async function createUserAdmin(initialValue: any, formData: FormData) {
         }
     }
 
-    redirect("/users-admin")
+    redirect("/admin")
 }
