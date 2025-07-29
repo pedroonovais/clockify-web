@@ -3,7 +3,7 @@ import { Button } from './button';
 import { MenuIcon, XIcon } from 'lucide-react';
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  return <header className="bg-gray-900 border-b border-gray-800">
+  return <header className="sticky top-0 z-50 bg-gray-900/80 border-b border-gray-800 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center" data-aos="fade-up-left">
