@@ -33,21 +33,25 @@ export async function createUserAdmin(initialValue: any, formData: FormData) {
 
     if(!response.ok) {
         const json = await response.json()
-        const errors = json.errors
+        interface ApiError {
+            field: string
+            defaultMessage: string
+        }
+        const errors: ApiError[] = json.errors
         
         console.log(errors)
 
         return { 
             values: data,
             errors: { 
-                idCompany: errors.find(e => e.field === "idCompany")?.defaultMessage, 
-                name: errors.find(e => e.field === "name")?.defaultMessage,
-                email: errors.find(e => e.field === "email")?.defaultMessage,
-                hoursLogged: errors.find(e => e.field === "hoursLogged")?.defaultMessage,
-                cpf: errors.find(e => e.field === "cpf")?.defaultMessage,
-                phone: errors.find(e => e.field === "phone")?.defaultMessage,
-                password: errors.find(e => e.field === "password")?.defaultMessage,
-                active: errors.find(e => e.field === "active")?.defaultMessage,
+                idCompany: errors.find((e: ApiError) => e.field === "idCompany")?.defaultMessage, 
+                name: errors.find((e: ApiError) => e.field === "name")?.defaultMessage,
+                email: errors.find((e: ApiError) => e.field === "email")?.defaultMessage,
+                hoursLogged: errors.find((e: ApiError) => e.field === "hoursLogged")?.defaultMessage,
+                cpf: errors.find((e: ApiError) => e.field === "cpf")?.defaultMessage,
+                phone: errors.find((e: ApiError) => e.field === "phone")?.defaultMessage,
+                password: errors.find((e: ApiError) => e.field === "password")?.defaultMessage,
+                active: errors.find((e: ApiError) => e.field === "active")?.defaultMessage,
             } 
         }
     }
